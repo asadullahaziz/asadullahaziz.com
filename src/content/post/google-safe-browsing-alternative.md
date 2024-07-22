@@ -2,7 +2,7 @@
 layout: ../../layouts/post.astro
 title: How to Replace Google Safe Browsing with Cloudflare Zero Trust
 description: How to Replace Google Safe Browsing with Cloudflare Zero Trust
-dateFormatted: Jul 14th, 2024
+dateFormatted: Jul 14 2024
 ---
 
 So, get this, right? I built the first version of [L(O\*62).ONG](https://loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo.ong/) using server-side redirects, but Google slapped me with a security warning the very next day. Talk about a buzzkill! I had to scramble and switch to local redirects with a warning message before sending folks on their way. Then came the fun part – begging Google for forgiveness.
