@@ -16,7 +16,7 @@ const { title } = Astro.props;
     <script is:inline>
       if (typeof Storage !== "undefined") {
         if (
-          localStorage.getItem("dark_mode") &&
+          !localStorage.getItem("dark_mode") ||
           localStorage.getItem("dark_mode") == "true"
         ) {
           document.documentElement.classList.add("dark");

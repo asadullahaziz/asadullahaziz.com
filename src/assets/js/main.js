@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	headerElement = document.getElementById("header");
 
 	if (
-		localStorage.getItem("dark_mode") &&
+		!localStorage.getItem("dark_mode") ||
 		localStorage.getItem("dark_mode") === "true"
 	) {
 		window.darkMode = true;
@@ -73,7 +73,7 @@ document.getElementById("darkToggle").addEventListener("click", () => {
 	document.documentElement.classList.add("duration-300");
 
 	if (document.documentElement.classList.contains("dark")) {
-		localStorage.removeItem("dark_mode");
+		localStorage.setItem("dark_mode", false);
 		showDay(true);
 	} else {
 		localStorage.setItem("dark_mode", true);
