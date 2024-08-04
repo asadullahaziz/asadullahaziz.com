@@ -16,13 +16,15 @@
   transform: translate3d(0, 0px, 0);
 }
 
-#darkToggle:hover #sun {
+/* Note: uncomment following to enable theme toggle hover effects */
+
+/* #darkToggle:hover #sun {
   transform: translate3d(0, 10px, 0);
 }
 
 #darkToggle:hover #moon {
   transform: translate3d(0, 10px, 0);
-}
+} */
 
 html.dark #darkToggle:hover .horizon {
   border-color: #718096 !important;
