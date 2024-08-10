@@ -26,9 +26,11 @@
   transform: translate3d(0, 10px, 0);
 } */
 
-html.dark #darkToggle:hover .horizon {
+/* Note: to enable horizon add following tailwind classes and uncomment following css properties
+  border-b */
+/* html.dark #darkToggle:hover .horizon {
   border-color: #718096 !important;
-}
+} */
 
 .horizon .setting {
   animation: 1s ease 0s 1 setting;
