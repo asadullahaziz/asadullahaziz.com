@@ -1,5 +1,11 @@
 [
 	{
+		"name": "Xenia",
+		"description": "The Facility and Frontline Operations Application.",
+		"image": "/assets/images/projects/xenia_dashboard.png",
+		"url": "https://xenia.team/"
+	},
+	{
 		"name": "TestFuse",
 		"description": "Hire smarter with job fitness assessments.",
 		"image": "/assets/images/projects/testfuse_dashboard.png",
