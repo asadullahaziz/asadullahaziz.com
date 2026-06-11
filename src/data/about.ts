@@ -1,36 +1,36 @@
 export const aboutMarkdown = `# Intro
 
-I'm Hassan — a Senior Software Engineer (AI-Augmented) at [Xenia](https://www.xenia.team), where I drive backend architecture for a B2B SaaS platform serving deskless workforces. I design scalable APIs and distributed systems in Node.js and TypeScript, with 5+ years across fintech and B2B SaaS.
+I'm Asad — a Senior Backend Engineer with an AI/LLM specialization, currently at [Xenia](https://www.xenia.team), an AI-powered operations platform for multi-location businesses. I build distributed systems, event-driven microservices, and production LLM features, with 5+ years across SaaS and fintech.
 
 # What I'm Building Now
 
-At Xenia I lead end-to-end ownership of backend systems — from architecture and data modeling through CI/CD, observability, and on-call. Recent work:
+At Xenia I lead backend and AI engineering and serve as technical lead for 5 of a 12-person team. The AI features I've led contributed directly to Xenia's **$12M Series A** and the **McDonald's USA** enterprise deal. Recent work:
 
-- **Real-time analytics on CDC + ClickHouse**, offloading 70% of read traffic from primary databases.
-- **Enterprise SSO via WorkOS** — SAML, Google OAuth, Azure AD — onboarded 10+ enterprise clients without authentication incidents.
-- **Offline-first mobile sync** for field operations in low-connectivity environments, cutting data loss by 90% across 10,000+ deskless workers.
-- **AWS infrastructure tuning** — reduced RDS CPU 50%, saving ~$3K/month.
+- **AI Template Digitizer** (LangChain, GPT-4o, RAG with PGVector, Langfuse) — converts uploaded inspection sheets into digital templates, driving a 99% reduction in churn and a 60% improvement in prompt accuracy.
+- **Multi-agent AI Copilot** (LangChain, LangGraph, PGVector, ClickHouse) — answers natural-language operations questions across locations.
+- **Notification system refactor** — moved from a cron-polling monolith to event-driven microservices, scaling from ~100K to 5M+ daily notifications.
+- **PDF generation service** — Handlebars, Puppeteer, Ghostscript, and an AWS Lambda compression pipeline cut image-heavy document generation from 30+ minutes to under 1 minute.
 
-# AI-Native Engineering
+# AI / LLM Engineering
 
-I work in an AI-augmented engineering style. I run [Claude Code](https://claude.com/claude-code) with custom skills, plugins, and parallel agents. I've established AI-native service documentation across our repositories that cuts new-engineer onboarding by 70% and uses these workflows to push sprint throughput 3×.
+I specialize in shipping LLMs to production: RAG pipelines with PGVector, multi-agent workflows with LangChain and LangGraph, observability with Langfuse, and Model Context Protocol (MCP) servers that let LLMs take real actions across a platform. Earlier I fine-tuned a RoBERTa model with Hugging Face Transformers for NLP classification.
 
-I write about this on [Dev.to](https://dev.to/hsnmnr) and [Medium](https://medium.com/@hsnmnr).
+I also work in an AI-augmented engineering style, running [Claude Code](https://claude.com/claude-code) with custom skills, MCP, and parallel agents. I write about backend and AI engineering on [Dev.to](https://dev.to/asadullahaziz) and [Medium](https://medium.com/@asadullahaziz).
 
 # Background
 
-Before Xenia, I built event-driven microservices at AIO (NestJS, Redis Pub/Sub, BullMQ), shipped Shariah-compliant payment infrastructure at KalPay Financials processing 5,000+ daily transactions, and grew from engineer to lead at Kcube AI.
+Before Xenia, I built AI-assisted resume and payout infrastructure at WriteSea (FastAPI, LangChain, Stripe Connect), was the founding engineer of TestFuse at Venturenox — migrating a FastAPI monolith to 5 Kafka-based microservices with multi-tenant auth and sandboxed code execution — and did full-stack and ML work at Sentwitt.
 
-I studied Computer Science at [Information Technology University (ITU)](https://itu.edu.pk) in Lahore, where I'm based now and work remotely with US-based teams.
+I studied Computer Science at the [University of Lahore (UOL)](https://uol.edu.pk), where I'm based, working remotely with US-based teams.
 
 # How I Work
 
-- **End-to-end ownership.** I prefer being responsible for the whole lifecycle — design, build, deploy, operate, iterate.
+- **End-to-end ownership.** I prefer being responsible for the whole lifecycle — design, build, deploy, operate, iterate — and writing the Technical Design Documents that anchor it.
+- **Impact-first.** I lead with outcomes and measure them: churn, latency, throughput, cost.
 - **Boring tech, sharp execution.** Postgres with the right indexes beats a clever distributed system most of the time.
-- **Cost-aware.** Infrastructure spend is real. Tuning queries, right-sizing services, and choosing the right tool can quietly save tens of thousands a year.
-- **AI-native.** Claude Code, Cursor, MCP, agentic patterns — daily drivers, not experiments.
+- **AI-native.** Production LLMs and agentic coding workflows are daily drivers, not experiments.
 
 # Get in Touch
 
-If you think I can help with your project, or want to talk shop on backend architecture, fintech, distributed systems, or AI-native engineering — [reach out](/contact).
+If you think I can help with your project, or want to talk shop on backend architecture, distributed systems, fintech, or production AI/LLM engineering — [reach out](/contact).
 `;

@@ -13,21 +13,22 @@ export default function Hero() {
         </div>
 
         <h1 className="hero-title">
-          <span className="hero-name">Hassan Munir</span>
+          <span className="hero-name">Asad Ullah Aziz</span>
         </h1>
 
         <p className="hero-tagline">
-          Senior Software Engineer with{' '}
+          Senior Backend Engineer with{' '}
           <span className="hero-highlight">5+ years</span> building distributed
-          backends in Node.js and TypeScript across fintech and B2B SaaS.
+          systems, event-driven microservices, and production AI/LLM features.
           <br />
-          AI-augmented, infrastructure-conscious, reliability-first.
+          Specialized in LLM integration, RAG pipelines, and multi-agent
+          workflows.
         </p>
 
         <div className="hero-chips">
-          <span className="hero-chip">Node.js / TypeScript</span>
-          <span className="hero-chip">NestJS &amp; PostgreSQL</span>
-          <span className="hero-chip">AWS &amp; Event-Driven</span>
+          <span className="hero-chip">Distributed Systems</span>
+          <span className="hero-chip">LLM / RAG Pipelines</span>
+          <span className="hero-chip">Event-Driven Microservices</span>
         </div>
 
         <div className="hero-cta">

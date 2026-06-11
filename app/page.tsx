@@ -6,7 +6,7 @@ import PageWrapper from '@/components/Template/PageWrapper';
 
 export const metadata: Metadata = {
   description:
-    'Senior Software Engineer with 5+ years designing scalable APIs and distributed systems in Node.js and TypeScript. Currently driving backend architecture at Xenia.',
+    'Senior Backend Engineer with 5+ years building distributed systems, event-driven microservices, and production AI/LLM features. Currently leading backend and AI engineering at Xenia.',
 };
 
 export default function HomePage() {

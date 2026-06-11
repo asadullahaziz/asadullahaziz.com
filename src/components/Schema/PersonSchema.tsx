@@ -26,7 +26,7 @@ export default function PersonSchema() {
     image: `${SITE_URL}/images/me.jpg`,
     jobTitle: currentJob.position,
     description:
-      'AI-first Senior Software Engineer with 5+ years designing scalable APIs and distributed systems in Node.js and TypeScript across fintech and B2B SaaS.',
+      'Senior Backend Engineer with an AI/LLM specialization and 5+ years building distributed systems, event-driven microservices, and production LLM features across SaaS and fintech.',
     ...(email && { email }),
     sameAs: socialLinks,
     address: {

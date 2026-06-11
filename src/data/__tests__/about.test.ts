@@ -11,21 +11,21 @@ describe('about data', () => {
   it('contains the intro section', () => {
     expect(aboutMarkdown).toContain('# Intro');
     expect(aboutMarkdown).toContain('Xenia');
-    expect(aboutMarkdown).toContain('TypeScript');
+    expect(aboutMarkdown).toContain('Senior Backend Engineer');
   });
 
   it('contains the current-work section', () => {
     expect(aboutMarkdown).toContain("# What I'm Building Now");
   });
 
-  it('contains the AI-native section', () => {
-    expect(aboutMarkdown).toContain('# AI-Native Engineering');
+  it('contains the AI/LLM section', () => {
+    expect(aboutMarkdown).toContain('# AI / LLM Engineering');
     expect(aboutMarkdown).toContain('Claude Code');
   });
 
   it('contains the background section', () => {
     expect(aboutMarkdown).toContain('# Background');
-    expect(aboutMarkdown).toContain('ITU');
+    expect(aboutMarkdown).toContain('University of Lahore');
   });
 
   it('contains the how-i-work section', () => {

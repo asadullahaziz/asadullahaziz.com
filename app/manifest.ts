@@ -7,7 +7,7 @@ export const dynamic = 'force-static';
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: AUTHOR_NAME,
-    short_name: 'HM',
+    short_name: 'AA',
     start_url: '/',
     display: 'browser',
     background_color: '#0a0e1a',

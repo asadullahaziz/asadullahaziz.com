@@ -53,3 +53,5 @@ Thumbs.db
 .grunt/
 .lock-wscript
 nohup.out
+
+docs/

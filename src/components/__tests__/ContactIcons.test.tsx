@@ -69,7 +69,7 @@ describe('ContactIcons', () => {
     const prevented = !calLink.dispatchEvent(clickEvent);
 
     expect(openModal).toHaveBeenCalledWith(
-      expect.stringContaining('hassanmunir'),
+      expect.stringContaining('asadullahaziz'),
     );
     expect(prevented).toBe(true);
   });

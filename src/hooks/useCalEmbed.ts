@@ -3,7 +3,7 @@
 import { getCalApi } from '@calcom/embed-react';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-export const CAL_LINK = 'hassanmunir/book-a-meeting';
+export const CAL_LINK = 'asadullahaziz/book-a-meeting';
 export const CAL_NAMESPACE_MODAL = 'book-a-meeting';
 
 // Brand accents from app/styles/tokens/colors.css. Keep in sync if the

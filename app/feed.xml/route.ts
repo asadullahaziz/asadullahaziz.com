@@ -68,9 +68,9 @@ export async function GET() {
 <?xml-stylesheet type="text/xsl" href="/feed.xsl"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hassan Munir - Writing</title>
+    <title>Asad Ullah Aziz - Writing</title>
     <link>${SITE_URL}/writing/</link>
-    <description>Notes on backend engineering, distributed systems, and shipping software by Hassan Munir.</description>
+    <description>Notes on backend engineering, distributed systems, and production AI/LLM engineering by Asad Ullah Aziz.</description>
     <language>en-us</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>${rssItems}

@@ -11,7 +11,7 @@ export interface WritingItem {
 // To add an entry:
 //   {
 //     title: 'Article title',
-//     url: 'https://dev.to/hsnmnr/...',
+//     url: 'https://dev.to/asadullahaziz/...',
 //     date: '2026-05-01',
 //     description: 'One-sentence summary shown on the writing page.',
 //   },

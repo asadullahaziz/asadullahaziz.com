@@ -25,17 +25,22 @@ const skills: Skill[] = [
   },
   {
     title: 'Python',
+    competency: 5,
+    category: ['Languages', 'Backend'],
+  },
+  {
+    title: 'Java',
     competency: 3,
     category: ['Languages'],
   },
   {
     title: 'SQL',
-    competency: 4,
+    competency: 5,
     category: ['Languages', 'Databases'],
   },
   {
     title: 'Bash',
-    competency: 3,
+    competency: 4,
     category: ['Languages', 'DevOps'],
   },
   // Backend
@@ -51,7 +56,22 @@ const skills: Skill[] = [
   },
   {
     title: 'Express.js',
+    competency: 5,
+    category: ['Backend'],
+  },
+  {
+    title: 'FastAPI',
+    competency: 5,
+    category: ['Backend'],
+  },
+  {
+    title: 'Django REST Framework',
     competency: 4,
+    category: ['Backend'],
+  },
+  {
+    title: 'Spring Boot',
+    competency: 3,
     category: ['Backend'],
   },
   {
@@ -64,6 +84,57 @@ const skills: Skill[] = [
     competency: 5,
     category: ['Backend'],
   },
+  // AI / LLM Engineering
+  {
+    title: 'LangChain',
+    competency: 5,
+    category: ['AI / LLM'],
+  },
+  {
+    title: 'LangGraph',
+    competency: 5,
+    category: ['AI / LLM'],
+  },
+  {
+    title: 'RAG',
+    competency: 5,
+    category: ['AI / LLM'],
+  },
+  {
+    title: 'PGVector',
+    competency: 5,
+    category: ['AI / LLM', 'Databases'],
+  },
+  {
+    title: 'Prompt Engineering',
+    competency: 5,
+    category: ['AI / LLM'],
+  },
+  {
+    title: 'OpenAI / GPT-4o',
+    competency: 5,
+    category: ['AI / LLM'],
+  },
+  {
+    title: 'Langfuse',
+    competency: 4,
+    category: ['AI / LLM', 'Monitoring'],
+  },
+  {
+    title: 'Hugging Face Transformers',
+    competency: 4,
+    category: ['AI / LLM'],
+  },
+  {
+    title: 'MCP',
+    competency: 5,
+    category: ['AI / LLM'],
+  },
+  {
+    title: 'Claude Code',
+    competency: 5,
+    category: ['AI / LLM'],
+  },
   // Databases
   {
     title: 'PostgreSQL',
@@ -72,6 +143,11 @@ const skills: Skill[] = [
   },
   {
     title: 'MongoDB',
+    competency: 5,
+    category: ['Databases'],
+  },
+  {
+    title: 'ClickHouse',
     competency: 4,
     category: ['Databases'],
   },
@@ -81,19 +157,30 @@ const skills: Skill[] = [
     category: ['Databases', 'Messaging'],
   },
   {
-    title: 'ClickHouse',
-    competency: 3,
-    category: ['Databases'],
+    title: 'Elasticsearch',
+    competency: 4,
+    category: ['Databases', 'Monitoring'],
+  },
+  // Messaging / Async
+  {
+    title: 'Apache Kafka',
+    competency: 4,
+    category: ['Messaging'],
   },
   {
-    title: 'TypeORM',
-    competency: 4,
-    category: ['Databases', 'Backend'],
+    title: 'BullMQ',
+    competency: 5,
+    category: ['Messaging', 'Backend'],
   },
   {
-    title: 'Mongoose',
+    title: 'Trigger.dev',
     competency: 4,
-    category: ['Databases', 'Backend'],
+    category: ['Messaging'],
+  },
+  {
+    title: 'Change Data Capture (CDC)',
+    competency: 4,
+    category: ['Messaging', 'Architecture'],
   },
   // Cloud / DevOps
   {
@@ -102,7 +189,7 @@ const skills: Skill[] = [
     category: ['Cloud', 'DevOps'],
   },
   {
-    title: 'Azure',
+    title: 'GCP',
     competency: 3,
     category: ['Cloud', 'DevOps'],
   },
@@ -116,27 +203,7 @@ const skills: Skill[] = [
     competency: 4,
     category: ['DevOps'],
   },
-  {
-    title: 'GitHub Actions',
-    competency: 4,
-    category: ['DevOps'],
-  },
-  // Messaging / Architecture
-  {
-    title: 'BullMQ',
-    competency: 5,
-    category: ['Messaging', 'Backend'],
-  },
-  {
-    title: 'AWS SQS',
-    competency: 4,
-    category: ['Messaging', 'Cloud'],
-  },
-  {
-    title: 'Change Data Capture (CDC)',
-    competency: 4,
-    category: ['Messaging', 'Architecture'],
-  },
+  // Architecture
   {
     title: 'Microservices',
     competency: 5,
@@ -148,56 +215,40 @@ const skills: Skill[] = [
     category: ['Architecture'],
   },
   {
-    title: 'Domain-Driven Design',
+    title: 'Distributed Systems',
+    competency: 5,
+    category: ['Architecture'],
+  },
+  {
+    title: 'Saga Pattern',
     competency: 4,
     category: ['Architecture'],
   },
   {
-    title: 'Serverless',
-    competency: 3,
-    category: ['Architecture', 'Cloud'],
-  },
-  // Monitoring
-  {
-    title: 'AWS CloudWatch',
+    title: 'Multi-Tenancy & RBAC',
     competency: 4,
-    category: ['Monitoring', 'Cloud'],
+    category: ['Architecture', 'Backend'],
   },
+  // Integrations
   {
-    title: 'Sentry',
-    competency: 4,
-    category: ['Monitoring'],
-  },
-  // AI / AI-Augmented Engineering
-  {
-    title: 'Claude Code',
+    title: 'Stripe',
     competency: 5,
-    category: ['AI'],
+    category: ['Integrations'],
   },
   {
-    title: 'Cursor',
-    competency: 5,
-    category: ['AI'],
-  },
-  {
-    title: 'Agentic Coding Workflows',
-    competency: 5,
-    category: ['AI'],
-  },
-  {
-    title: 'MCP',
+    title: 'Stytch',
     competency: 4,
-    category: ['AI'],
+    category: ['Integrations'],
   },
   {
-    title: 'Plugins & Custom Skills',
+    title: 'Judge0',
     competency: 4,
-    category: ['AI'],
+    category: ['Integrations'],
   },
   {
-    title: 'Parallel AI Agents',
+    title: 'Puppeteer',
     competency: 4,
-    category: ['AI'],
+    category: ['Integrations'],
   },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 

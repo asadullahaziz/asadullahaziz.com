@@ -4,6 +4,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
 import { faMedium } from '@fortawesome/free-brands-svg-icons/faMedium';
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons/faXTwitter';
 import { faCalendarCheck } from '@fortawesome/free-regular-svg-icons/faCalendarCheck';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons/faEnvelope';
 
@@ -14,7 +15,7 @@ export interface ContactItem {
   // If set, the UI opens an inline Cal.com modal on click instead of
   // navigating to `link`. The public `link` is preserved so it still
   // appears in PersonSchema's `sameAs` for SEO. `cal.link` is the Cal
-  // event slug, e.g. "hassanmunir/book-a-meeting".
+  // event slug, e.g. "asadullahaziz/book-a-meeting".
   cal?: {
     link: string;
   };
@@ -22,38 +23,43 @@ export interface ContactItem {
 
 const data: ContactItem[] = [
   {
-    link: 'https://www.linkedin.com/in/hsnmnr',
+    link: 'https://www.linkedin.com/in/asadullahaziz',
     label: 'LinkedIn',
     icon: faLinkedinIn,
   },
   {
-    link: 'https://github.com/hsnmnr',
+    link: 'https://github.com/asadullahaziz',
     label: 'GitHub',
     icon: faGithub,
   },
   {
-    link: 'mailto:connect@hassanmunir.me',
+    link: 'mailto:connect@asadullahaziz.com',
     label: 'Email',
     icon: faEnvelope,
   },
   {
-    link: 'https://cal.com/hassanmunir/book-a-meeting',
+    link: 'https://cal.com/asadullahaziz/book-a-meeting',
     label: 'Book a meeting',
     icon: faCalendarCheck,
-    cal: { link: 'hassanmunir/book-a-meeting' },
+    cal: { link: 'asadullahaziz/book-a-meeting' },
   },
   {
-    link: 'https://dev.to/hsnmnr',
+    link: 'https://x.com/asadullahaziz',
+    label: 'X',
+    icon: faXTwitter,
+  },
+  {
+    link: 'https://dev.to/asadullahaziz',
     label: 'Dev.to',
     icon: faDev,
   },
   {
-    link: 'https://medium.com/@hsnmnr',
+    link: 'https://medium.com/@asadullahaziz',
     label: 'Medium',
     icon: faMedium,
   },
   {
-    link: 'https://www.instagram.com/hssnmnr/',
+    link: 'https://www.instagram.com/asadullahaziz/',
     label: 'Instagram',
     icon: faInstagram,
   },

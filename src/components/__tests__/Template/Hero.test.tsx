@@ -15,22 +15,22 @@ describe('Hero', () => {
     render(<Hero />);
 
     const heading = screen.getByRole('heading', { level: 1 });
-    expect(heading).toHaveTextContent('Hassan Munir');
+    expect(heading).toHaveTextContent('Asad Ullah Aziz');
   });
 
   it('renders the tagline content', () => {
     render(<Hero />);
 
-    expect(screen.getByText(/Senior Software Engineer/i)).toBeInTheDocument();
+    expect(screen.getByText(/Senior Backend Engineer/i)).toBeInTheDocument();
     expect(screen.getByText(/5\+ years/i)).toBeInTheDocument();
   });
 
   it('displays hero chips for credentials', () => {
     render(<Hero />);
 
-    expect(screen.getByText('Node.js / TypeScript')).toBeInTheDocument();
-    expect(screen.getByText('NestJS & PostgreSQL')).toBeInTheDocument();
-    expect(screen.getByText('AWS & Event-Driven')).toBeInTheDocument();
+    expect(screen.getByText('Distributed Systems')).toBeInTheDocument();
+    expect(screen.getByText('LLM / RAG Pipelines')).toBeInTheDocument();
+    expect(screen.getByText('Event-Driven Microservices')).toBeInTheDocument();
   });
 
   it('renders CTA buttons with correct links', () => {

@@ -5,44 +5,31 @@ export interface Course {
   university: string;
 }
 
-// TODO: replace with real ITU courses Hassan wants to highlight, or remove
-// the Courses section entirely from app/resume/page.tsx if not relevant.
+// Relevant coursework from the BS Computer Science at University of Lahore.
 const courses: Course[] = [
   {
     title: 'Data Structures and Algorithms',
     number: 'CS 201',
-    link: 'https://itu.edu.pk',
-    university: 'ITU',
+    link: 'https://uol.edu.pk',
+    university: 'UOL',
   },
   {
-    title: 'Database Systems',
-    number: 'CS 305',
-    link: 'https://itu.edu.pk',
-    university: 'ITU',
+    title: 'Artificial Intelligence',
+    number: 'CS 351',
+    link: 'https://uol.edu.pk',
+    university: 'UOL',
   },
   {
-    title: 'Operating Systems',
-    number: 'CS 330',
-    link: 'https://itu.edu.pk',
-    university: 'ITU',
+    title: 'Machine Learning',
+    number: 'CS 451',
+    link: 'https://uol.edu.pk',
+    university: 'UOL',
   },
   {
-    title: 'Computer Networks',
-    number: 'CS 340',
-    link: 'https://itu.edu.pk',
-    university: 'ITU',
-  },
-  {
-    title: 'Software Engineering',
-    number: 'CS 350',
-    link: 'https://itu.edu.pk',
-    university: 'ITU',
-  },
-  {
-    title: 'Web Engineering',
-    number: 'CS 360',
-    link: 'https://itu.edu.pk',
-    university: 'ITU',
+    title: 'Distributed Systems',
+    number: 'CS 431',
+    link: 'https://uol.edu.pk',
+    university: 'UOL',
   },
 ];
 

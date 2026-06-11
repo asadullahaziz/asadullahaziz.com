@@ -7,10 +7,10 @@ export interface Degree {
 
 const degrees: Degree[] = [
   {
-    school: 'Information Technology University (ITU)',
+    school: 'University of Lahore (UOL)',
     degree: 'B.S. Computer Science',
-    link: 'https://itu.edu.pk',
-    year: 2021,
+    link: 'https://uol.edu.pk',
+    year: 2022,
   },
 ];
 

@@ -6,7 +6,7 @@ import BookMeetingButton from '../Contact/BookMeetingButton';
 const openModal = vi.fn();
 
 vi.mock('@/hooks/useCalEmbed', () => ({
-  CAL_LINK: 'hassanmunir/book-a-meeting',
+  CAL_LINK: 'asadullahaziz/book-a-meeting',
   useCalModal: () => ({ openModal }),
 }));
 
@@ -21,7 +21,7 @@ describe('BookMeetingButton', () => {
     expect(link).toBeInTheDocument();
     expect(link).toHaveAttribute(
       'href',
-      'https://cal.com/hassanmunir/book-a-meeting',
+      'https://cal.com/asadullahaziz/book-a-meeting',
     );
   });
 
@@ -36,7 +36,7 @@ describe('BookMeetingButton', () => {
     });
     const prevented = !link.dispatchEvent(clickEvent);
 
-    expect(openModal).toHaveBeenCalledWith('hassanmunir/book-a-meeting');
+    expect(openModal).toHaveBeenCalledWith('asadullahaziz/book-a-meeting');
     expect(prevented).toBe(true);
   });
 

@@ -3,9 +3,9 @@
  */
 
 // Site configuration
-export const SITE_URL = 'https://hassanmunir.me';
-export const AUTHOR_NAME = 'Hassan Munir';
-export const TWITTER_HANDLE = '';
+export const SITE_URL = 'https://asadullahaziz.com';
+export const AUTHOR_NAME = 'Asad Ullah Aziz';
+export const TWITTER_HANDLE = '@asadullahaziz';
 
 // Open Graph share card. 1200x630 at 1.91:1 meets the recommended size
 // for Facebook, LinkedIn, and X summary_large_image cards.

@@ -17,7 +17,7 @@ import {
 import './tailwind.css';
 
 const twitterHandle = TWITTER_HANDLE.trim();
-const homepageTitle = `${AUTHOR_NAME} — AI-first Senior Software Engineer`;
+const homepageTitle = `${AUTHOR_NAME} — Senior Backend Engineer (AI/LLM)`;
 
 const sourceSans = Source_Sans_3({
   weight: ['400', '700'],
@@ -38,7 +38,7 @@ const raleway = Raleway({
 });
 
 const siteDescription =
-  'Senior Software Engineer with 5+ years designing scalable APIs and distributed systems in Node.js and TypeScript. Currently driving backend architecture at Xenia.';
+  'Senior Backend Engineer with 5+ years building distributed systems, event-driven microservices, and production AI/LLM features. Currently leading backend and AI engineering at Xenia.';
 
 export const metadata: Metadata = {
   title: {
@@ -48,15 +48,17 @@ export const metadata: Metadata = {
   description: siteDescription,
   keywords: [
     AUTHOR_NAME,
-    'Senior Software Engineer',
+    'Senior Backend Engineer',
+    'AI Engineer',
+    'LLM Engineer',
+    'RAG',
+    'LangChain',
     'Node.js',
     'TypeScript',
     'NestJS',
     'PostgreSQL',
-    'AWS',
     'backend engineering',
     'distributed systems',
-    'fintech',
   ],
   authors: [{ name: AUTHOR_NAME }],
   creator: AUTHOR_NAME,

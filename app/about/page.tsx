@@ -9,7 +9,7 @@ import { createPageMetadata } from '@/lib/metadata';
 export const metadata: Metadata = createPageMetadata({
   title: 'About',
   description:
-    'Learn about Hassan Munir — Senior Software Engineer with 5+ years building scalable APIs and distributed systems across fintech and B2B SaaS.',
+    'Learn about Asad Ullah Aziz — Senior Backend Engineer with 5+ years building distributed systems, event-driven microservices, and production AI/LLM features.',
   path: '/about/',
 });
 

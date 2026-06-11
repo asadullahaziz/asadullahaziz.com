@@ -16,7 +16,7 @@ import { createPageMetadata } from '@/lib/metadata';
 export const metadata: Metadata = createPageMetadata({
   title: 'Resume',
   description:
-    'Hassan Munir — Senior Software Engineer. Xenia, AIO, KalPay, Kcube AI. Node.js, TypeScript, NestJS, PostgreSQL, AWS.',
+    'Asad Ullah Aziz — Senior Backend Engineer. Xenia, WriteSea, Venturenox, Sentwitt. Node.js, TypeScript, Python, LangChain, PostgreSQL, AWS, Kafka.',
   path: '/resume/',
 });
 
@@ -27,22 +27,22 @@ export default function ResumePage() {
         <header className="resume-header">
           <h1 className="resume-title">Resume</h1>
           <a
-            href="https://docs.google.com/document/d/1IDjj6ZtoX431WaR4M1uyAIyuVW4a85uJX6M7RNAc2Bk/export?format=pdf"
+            href="/Asad-Ullah-Aziz-Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="button button-primary resume-pdf-btn"
-            download="Hassan_Munir_Resume.pdf"
+            download="Asad_Ullah_Aziz_Resume.pdf"
           >
             Download PDF
           </a>
           <p className="resume-summary">
-            Senior Software Engineer with 5+ years designing scalable APIs,
-            platform capabilities, and distributed systems in Node.js and
-            TypeScript. Currently driving backend architecture at Xenia,
-            building real-time analytics pipelines and reducing infrastructure
-            costs by 50%+. Proven track record across fintech and B2B SaaS —
-            high-reliability services, event-driven microservices, and
-            enterprise-grade authentication.
+            Senior Backend Engineer with 5+ years building distributed systems,
+            event-driven microservices, and AI-powered SaaS products. Currently
+            leading backend and AI engineering at Xenia, where the AI features I
+            led contributed directly to a $12M Series A and the McDonald&apos;s
+            USA enterprise deal. Experienced in production LLM integration, RAG
+            pipelines, and multi-agent workflows using LangChain, LangGraph,
+            PGVector, and OpenAI.
           </p>
         </header>
 

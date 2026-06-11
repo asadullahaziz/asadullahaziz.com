@@ -8,7 +8,7 @@ import { createPageMetadata } from '@/lib/metadata';
 export const metadata: Metadata = createPageMetadata({
   title: 'Projects',
   description:
-    'Selected professional, freelance, and learning projects by Hassan Munir.',
+    'Selected backend, distributed systems, and AI/LLM engineering projects by Asad Ullah Aziz.',
   path: '/projects/',
 });
 

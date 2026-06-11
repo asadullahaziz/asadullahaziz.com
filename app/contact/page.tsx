@@ -10,7 +10,7 @@ import { createPageMetadata } from '@/lib/metadata';
 export const metadata: Metadata = createPageMetadata({
   title: 'Contact',
   description:
-    'Contact Hassan Munir via email at connect@hassanmunir.me, or find me on LinkedIn and GitHub.',
+    'Contact Asad Ullah Aziz via email at connect@asadullahaziz.com, or find me on LinkedIn and GitHub.',
   path: '/contact/',
 });
 

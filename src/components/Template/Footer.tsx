@@ -16,12 +16,12 @@ export default function Footer() {
             <ThemePortrait width={80} height={80} />
           </Link>
           <div className="footer-info">
-            <h3>Hassan Munir</h3>
+            <h3>Asad Ullah Aziz</h3>
             <p className="footer-role">{currentRole}</p>
             <p className="footer-copyright">
               &copy; {new Date().getFullYear()} ·{' '}
               <a
-                href="https://github.com/hsnmnr/hsnmnr-site"
+                href="https://github.com/asadullahaziz/asadullahaziz.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >

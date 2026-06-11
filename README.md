@@ -1,8 +1,8 @@
-# hassanmunir.me
+# asadullahaziz.com
 
-Personal website for Hassan Munir, Senior Software Engineer.
+Personal website for Asad Ullah Aziz, Senior Backend Engineer.
 
-**[Live →](https://hassanmunir.me)**
+**[Live →](https://asadullahaziz.com)**
 
 Stack: Next.js 16, React 19, TypeScript, Tailwind CSS v4.
 
