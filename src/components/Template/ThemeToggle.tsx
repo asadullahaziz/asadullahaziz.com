@@ -3,7 +3,6 @@
 import { useCallback, useEffect, useState } from 'react';
 
 import { MoonIcon, SunIcon } from '@/components/Icons';
-import { setFaviconTheme } from '@/lib/favicon';
 
 export default function ThemeToggle() {
   const [isDark, setIsDark] = useState<boolean | null>(null);
@@ -22,7 +21,6 @@ export default function ThemeToggle() {
     const theme = isDark ? 'dark' : 'light';
     document.documentElement.setAttribute('data-theme', theme);
     window.localStorage.setItem('theme', theme);
-    setFaviconTheme(theme);
   }, [isDark]);
 
   const toggle = useCallback(() => {

@@ -50,3 +50,23 @@ export function MoonIcon({ size = 20, className }: IconProps) {
     </svg>
   );
 }
+
+// "A" monogram, inspired by the pi-website wordmark. Uses currentColor so the
+// nav logo follows the active theme (dark fg in light mode, light fg in dark).
+export function LogoMark({ size = 28, className }: IconProps) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 800 800"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
+      <g transform="translate(58.68,0)">
+        <path d="M165.29 165.29 H282.65 V634.72 H165.29 Z M400 165.29 H517.36 V634.72 H400 Z M282.65 165.29 H400 V282.65 H282.65 Z M282.65 400 H400 V517.36 H282.65 Z" />
+      </g>
+    </svg>
+  );
+}

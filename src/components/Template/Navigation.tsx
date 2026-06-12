@@ -3,7 +3,9 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+import { LogoMark } from '@/components/Icons';
 import routes from '@/data/routes';
+import { AUTHOR_NAME } from '@/lib/utils';
 
 import Hamburger from './Hamburger';
 import ThemeToggle from './ThemeToggle';
@@ -18,8 +20,8 @@ export default function Navigation() {
 
   return (
     <header className="site-header">
-      <Link href="/" className="site-logo">
-        <span className="logo-text">HM</span>
+      <Link href="/" className="site-logo" aria-label={`${AUTHOR_NAME} — home`}>
+        <LogoMark className="logo-mark" />
       </Link>
 
       <nav className="nav-links">
