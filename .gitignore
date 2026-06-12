@@ -54,4 +54,6 @@ Thumbs.db
 .lock-wscript
 nohup.out
 
+# Other
 docs/
+.opensrc/
