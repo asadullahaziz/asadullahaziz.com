@@ -4,16 +4,24 @@
    ======================================== */
 
 .site-logo {
+  position: relative;
   display: flex;
   align-items: center;
+  height: var(--header-height);
   text-decoration: none;
 }
 
 .logo-mark {
   display: block;
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 2.25rem;
+  height: 2.25rem;
   color: var(--color-fg-bold);
+}
+
+@media (max-width: 736px) {
+  .site-logo {
+    height: var(--header-height-mobile);
+  }
 }
 
 .nav-links {
