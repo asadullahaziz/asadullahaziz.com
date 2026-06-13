@@ -17,7 +17,7 @@ import {
 import './tailwind.css';
 
 const twitterHandle = TWITTER_HANDLE.trim();
-const homepageTitle = `${AUTHOR_NAME} — Senior Backend Engineer (AI/LLM)`;
+const homepageTitle = `${AUTHOR_NAME} | Senior Backend Engineer (AI/LLM)`;
 
 const sourceSans = Source_Sans_3({
   weight: ['400', '700'],
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.webmanifest',
   // A single self-contained "A" monogram (white glyph on a dark rounded
-  // square) serves both themes — it reads well against light and dark
+  // square) serves both themes; it reads well against light and dark
   // browser chrome, so there is no light/dark favicon swap.
   icons: {
     icon: [

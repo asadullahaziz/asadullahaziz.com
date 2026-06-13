@@ -10,7 +10,7 @@ export default function ContactIcons() {
   // `openModal` is synchronous: it returns true only if Cal is already
   // loaded. If it's not yet ready (slow connection, first paint), we
   // skip `preventDefault` and let the native href take the user to
-  // cal.com — no queued modal call that fires after they've navigated.
+  // cal.com; no queued modal call that fires after they've navigated.
   //
   // Uses the MODAL namespace (separate from the inline embed's
   // namespace) so a previously-opened modal can't be retriggered when

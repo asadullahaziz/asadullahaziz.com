@@ -17,7 +17,7 @@ export default function Hero() {
         </h1>
 
         <p className="hero-tagline">
-          Senior Backend Engineer with{' '}
+          Senior Software Engineer with{' '}
           <span className="hero-highlight">5+ years</span> building distributed
           systems, event-driven microservices, and production AI/LLM features.
           <br />
@@ -27,8 +27,8 @@ export default function Hero() {
 
         <div className="hero-chips">
           <span className="hero-chip">Distributed Systems</span>
-          <span className="hero-chip">LLM / RAG Pipelines</span>
-          <span className="hero-chip">Event-Driven Microservices</span>
+          <span className="hero-chip">LLM / RAG &amp; Multi-Agent</span>
+          <span className="hero-chip">Node.js / FastAPI / Next.js</span>
         </div>
 
         <div className="hero-cta">

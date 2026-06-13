@@ -16,7 +16,7 @@ import { createPageMetadata } from '@/lib/metadata';
 export const metadata: Metadata = createPageMetadata({
   title: 'Resume',
   description:
-    'Asad Ullah Aziz — Senior Backend Engineer. Xenia, WriteSea, Venturenox, Sentwitt. Node.js, TypeScript, Python, LangChain, PostgreSQL, AWS, Kafka.',
+    'Asad Ullah Aziz, Senior Backend Engineer. Xenia, WriteSea, Venturenox, Sentwitt. Node.js, TypeScript, Python, LangChain, PostgreSQL, AWS, Kafka.',
   path: '/resume/',
 });
 

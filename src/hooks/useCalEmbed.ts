@@ -47,7 +47,7 @@ function readTheme(): Theme {
 // hold off rendering theme-dependent content until the real theme is
 // known. A blocking head script in app/layout.tsx sets `data-theme` on
 // `<html>` before hydration, so `readTheme()` is correct as soon as the
-// first effect runs — but initial useState would lock us to 'light' for
+// first effect runs, but initial useState would lock us to 'light' for
 // one paint and cause a flash + duplicate iframe load for dark users.
 function useTheme(): Theme | null {
   const [theme, setTheme] = useState<Theme | null>(null);
@@ -91,7 +91,7 @@ function scheduleIdle(fn: () => void): () => void {
  * Click-to-open Cal modal. Returns a synchronous `openModal(calLink)`
  * that opens immediately if Cal is loaded, or returns false if not
  * (callers should let the native href fall back to cal.com in that
- * case — avoids a queued-call race where the modal opens on a page
+ * case: avoids a queued-call race where the modal opens on a page
  * the user already navigated away from).
  */
 export function useCalModal() {

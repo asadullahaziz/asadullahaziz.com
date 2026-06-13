@@ -20,7 +20,7 @@ export default function Navigation() {
 
   return (
     <header className="site-header">
-      <Link href="/" className="site-logo" aria-label={`${AUTHOR_NAME} — home`}>
+      <Link href="/" className="site-logo" aria-label={`${AUTHOR_NAME}, home`}>
         <LogoMark className="logo-mark" />
       </Link>
 

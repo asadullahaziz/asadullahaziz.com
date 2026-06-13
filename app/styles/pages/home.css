@@ -146,7 +146,7 @@
   transform: translateY(-1px);
 }
 
-/* CTA buttons — row 1: About Me + View Resume side by side.
+/* CTA buttons, row 1: About Me + View Resume side by side.
    Row 2: Book a Meeting centered below as a third option.
    Grid is wide enough that "View Resume" fits on a single line. */
 .hero-cta {
