@@ -44,17 +44,17 @@ const data: ContactItem[] = [
     cal: { link: 'asadullahaziz/book-a-meeting' },
   },
   {
-    link: 'https://x.com/asadullahaziz',
+    link: 'https://x.com/asadullahaziz99',
     label: 'X',
     icon: faXTwitter,
   },
   {
-    link: 'https://dev.to/asadullahaziz',
+    link: 'https://dev.to/asadullahaziz99',
     label: 'Dev.to',
     icon: faDev,
   },
   {
-    link: 'https://medium.com/@asadullahaziz',
+    link: 'https://medium.com/@asadullahaziz99',
     label: 'Medium',
     icon: faMedium,
   },
