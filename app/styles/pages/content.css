@@ -203,7 +203,7 @@
      flex items, which caused the entire @domain to wrap to its own
      line whenever the prefix got long. With inline-block, the long
      hyphenated prefixes break at natural word boundaries (hyphens) and
-     @hassanmunir.me stays attached to the closest fragment. */
+     @asadullahaziz.com stays attached to the closest fragment. */
   display: inline-block;
   padding: 0.75rem 1.5rem;
   font-size: var(--text-lg);
