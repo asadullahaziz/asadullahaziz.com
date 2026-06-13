@@ -11,7 +11,7 @@ describe('about data', () => {
   it('contains the intro section', () => {
     expect(aboutMarkdown).toContain('# Intro');
     expect(aboutMarkdown).toContain('Xenia');
-    expect(aboutMarkdown).toContain('Senior Backend Engineer');
+    expect(aboutMarkdown).toContain('Senior Software Engineer');
   });
 
   it('contains the current-work section', () => {

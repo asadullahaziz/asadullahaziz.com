@@ -21,7 +21,7 @@ describe('Hero', () => {
   it('renders the tagline content', () => {
     render(<Hero />);
 
-    expect(screen.getByText(/Senior Backend Engineer/i)).toBeInTheDocument();
+    expect(screen.getByText(/Senior Software Engineer/i)).toBeInTheDocument();
     expect(screen.getByText(/5\+ years/i)).toBeInTheDocument();
   });
 
@@ -29,8 +29,8 @@ describe('Hero', () => {
     render(<Hero />);
 
     expect(screen.getByText('Distributed Systems')).toBeInTheDocument();
-    expect(screen.getByText('LLM / RAG Pipelines')).toBeInTheDocument();
-    expect(screen.getByText('Event-Driven Microservices')).toBeInTheDocument();
+    expect(screen.getByText('LLM / RAG & Multi-Agent')).toBeInTheDocument();
+    expect(screen.getByText('Node.js / FastAPI / Next.js')).toBeInTheDocument();
   });
 
   it('renders CTA buttons with correct links', () => {

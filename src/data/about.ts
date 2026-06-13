@@ -1,6 +1,6 @@
 export const aboutMarkdown = `# Intro
 
-I'm Asad, a Senior Backend Engineer with an AI/LLM specialization, currently at [Xenia](https://www.xenia.team), an AI-powered operations platform for multi-location businesses. I build distributed systems, event-driven microservices, and production LLM features, with 5+ years across SaaS and fintech.
+I'm Asad, a Senior Software Engineer with an AI/LLM specialization, currently at [Xenia](https://www.xenia.team), an AI-powered operations platform for multi-location businesses. I build distributed systems, event-driven microservices, and production LLM features, with 5+ years across SaaS and fintech.
 
 # What I'm Building Now
 

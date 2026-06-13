@@ -14,7 +14,7 @@ export interface Position {
 const work: Position[] = [
   {
     name: 'Xenia',
-    position: 'Senior Backend Engineer',
+    position: 'Senior Software Engineer',
     url: 'https://www.xenia.team',
     startDate: '2024-09-01',
     summary: `Leading backend and AI engineering at Xenia (Remote, Chicago IL), an AI-powered
@@ -47,7 +47,7 @@ const work: Position[] = [
   },
   {
     name: 'Venturenox',
-    position: 'Backend Engineer (Founding Engineer, TestFuse)',
+    position: 'Backend Engineer',
     url: 'https://venturenox.com',
     startDate: '2022-06-01',
     endDate: '2024-01-01',

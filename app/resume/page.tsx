@@ -16,7 +16,7 @@ import { createPageMetadata } from '@/lib/metadata';
 export const metadata: Metadata = createPageMetadata({
   title: 'Resume',
   description:
-    'Asad Ullah Aziz, Senior Backend Engineer. Xenia, WriteSea, Venturenox, Sentwitt. Node.js, TypeScript, Python, LangChain, PostgreSQL, AWS, Kafka.',
+    'Asad Ullah Aziz, Senior Software Engineer. Xenia, WriteSea, Venturenox, Sentwitt. Node.js, TypeScript, Python, LangChain, PostgreSQL, AWS, Kafka.',
   path: '/resume/',
 });
 
@@ -36,7 +36,7 @@ export default function ResumePage() {
             Download PDF
           </a>
           <p className="resume-summary">
-            Senior Backend Engineer with 5+ years building distributed systems,
+            Senior Software Engineer with 5+ years building distributed systems,
             event-driven microservices, and AI-powered SaaS products. Currently
             leading backend and AI engineering at Xenia, where the AI features I
             led contributed directly to a $12M Series A and the McDonald&apos;s

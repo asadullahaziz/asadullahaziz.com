@@ -26,7 +26,7 @@ export default function PersonSchema() {
     image: `${SITE_URL}/images/me.jpg`,
     jobTitle: currentJob.position,
     description:
-      'Senior Backend Engineer with an AI/LLM specialization and 5+ years building distributed systems, event-driven microservices, and production LLM features across SaaS and fintech.',
+      'Senior Software Engineer with an AI/LLM specialization and 5+ years building distributed systems, event-driven microservices, and production LLM features across SaaS and fintech.',
     ...(email && { email }),
     sameAs: socialLinks,
     address: {
