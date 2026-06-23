@@ -4,43 +4,34 @@
    ======================================== */
 
 @layer base {
-  /* Modern link styling with animated underline */
-  a {
-    color: var(--color-fg);
-    text-decoration: none;
-    background-image: linear-gradient(var(--color-accent), var(--color-accent));
-    background-size: 0% 1.5px;
-    background-repeat: no-repeat;
-    background-position: left bottom;
+  /* pi.dev link styling: quiet underline that warms to the text color on hover. */
+  a,
+  a:visited {
+    color: var(--muted-strong);
+    text-decoration-line: underline;
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: var(--accent-underline-muted);
+    text-underline-offset: 0.14em;
     transition:
-      color var(--duration-fast) var(--ease-out),
-      background-size var(--duration-normal) var(--ease-out);
+      color 140ms ease,
+      text-decoration-color 140ms ease;
   }
 
-  a:hover {
-    color: var(--color-accent);
-    background-size: 100% 1.5px;
+  a:hover,
+  a:focus-visible {
+    color: var(--text);
+    text-decoration-color: var(--accent);
   }
 
-  /* Keep simple underline for inline content links
-     Exclude .hero-highlight which uses text-decoration instead
-     Reset the animated underline to avoid double underline */
+  /* Inline prose links lean on the accent a little more. */
   p a:not(.hero-highlight),
   li a:not(.hero-highlight) {
-    background-image: linear-gradient(
-      transparent calc(100% - 1.5px),
-      var(--color-accent-underline) 1.5px
-    );
-    background-size: 100% 100%;
-    background-position: left bottom;
-    transition:
-      color var(--duration-fast) var(--ease-out),
-      background-image var(--duration-fast) var(--ease-out);
+    color: var(--accent);
   }
 
   p a:not(.hero-highlight):hover,
   li a:not(.hero-highlight):hover {
-    color: var(--color-accent-hover);
-    background-image: linear-gradient(transparent calc(100% - 1.5px), var(--color-accent) 1.5px);
+    color: var(--text);
+    text-decoration-color: var(--accent);
   }
 }

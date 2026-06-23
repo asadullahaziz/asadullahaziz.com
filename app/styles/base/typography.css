@@ -77,12 +77,13 @@
   }
 
   code {
-    background: var(--color-border-bg);
-    border: solid 1px var(--color-border);
+    background: var(--accent-surface-subtle);
+    border: solid 1px var(--accent-surface-soft);
+    border-radius: var(--radius-xs);
+    color: var(--text);
     font-family: var(--font-mono);
-    font-size: var(--text-md);
-    margin: 0 0.25em;
-    padding: 0.25em 0.65em;
+    font-size: 0.875em;
+    padding: 0.15rem 0.4rem;
   }
 
   ul {
@@ -103,7 +104,8 @@
   }
 
   blockquote {
-    border-left: solid 4px var(--color-border);
+    border-left: solid 3px var(--accent);
+    color: var(--copy);
     font-style: italic;
     margin: 0 0 var(--spacing-element) 0;
     padding: 0.5em 0 0.5em var(--spacing-element);

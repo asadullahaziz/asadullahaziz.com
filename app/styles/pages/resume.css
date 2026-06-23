@@ -31,13 +31,14 @@
 .resume-page .skills .title h3,
 .resume-page .courses .title h3,
 .resume-page .references .title h3 {
+  font-family: var(--font-serif);
   font-size: var(--text-3xl);
-  font-weight: var(--font-weight-black);
-  letter-spacing: var(--tracking-tight);
-  color: var(--color-fg-bold);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.01em;
+  color: var(--text);
   display: inline-block;
-  padding-bottom: 0.75rem;
-  border-bottom: 3px solid var(--color-accent);
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--accent);
 }
 
 .resume-page .skills {
@@ -83,17 +84,19 @@
 }
 
 .resume-title {
+  font-family: var(--font-serif);
   font-size: clamp(2.5rem, 5vw, 3.5rem);
-  font-weight: var(--font-weight-black);
-  letter-spacing: var(--tracking-tight);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
   margin-bottom: 1.25rem;
-  color: var(--color-fg-bold);
+  color: var(--text);
 }
 
 .resume-summary {
+  font-family: var(--font-serif);
   font-size: var(--text-lg);
-  line-height: 1.7;
-  color: var(--color-fg);
+  line-height: 1.5;
+  color: var(--copy);
   max-width: 640px;
   margin: 0 auto;
 }
@@ -113,13 +116,12 @@
   position: sticky;
   top: var(--header-height);
   z-index: var(--z-sticky);
-  background: color-mix(in srgb, var(--color-bg-alt) 92%, transparent);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: color-mix(in srgb, var(--bg-canvas) 88%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: var(--spacing-4) var(--spacing-6);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border-bg);
-  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
 }
 
 @media (max-width: 736px) {
@@ -134,31 +136,33 @@
 }
 
 .resume-nav-link {
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
+  font-family: var(--font-mono);
   font-size: var(--text-sm);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-fg-light);
+  font-weight: 500;
+  color: var(--muted-strong);
   background: transparent;
   border: none;
   border-radius: var(--radius-sm);
   text-decoration: none;
-  transition: all var(--duration-fast) var(--ease-out);
+  transition:
+    color var(--duration-fast) var(--ease-out),
+    background var(--duration-fast) var(--ease-out);
 }
 
 .resume-nav-link:hover {
-  color: var(--color-fg);
-  background: var(--color-surface-hover);
+  color: var(--text);
+  background: var(--control-background-hover);
 }
 
 /* Active state - subtle highlight */
 .resume-nav-link.active {
-  color: var(--color-accent);
-  background: var(--color-accent-subtle);
-  font-weight: var(--font-weight-bold);
+  color: var(--text);
+  background: var(--accent-surface-soft);
 }
 
 .resume-nav-link:focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
 }
 
@@ -171,7 +175,7 @@
 .resume-section {
   scroll-margin-top: calc(var(--header-height) + var(--scroll-offset-resume));
   padding-top: var(--spacing-10);
-  border-top: 2px solid var(--color-border);
+  border-top: 1px solid var(--line-strong);
 }
 
 .resume-section:first-child {

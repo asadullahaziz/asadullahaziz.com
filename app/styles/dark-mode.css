@@ -1,203 +1,91 @@
 /* ========================================
-   DARK MODE
-   Supports both system preference and manual toggle
+   DARK MODE  ([data-theme='dark'])
+   pi.dev "cool" dark theme. Token overrides only — components consume
+   the semantic tokens below and adapt automatically.
    ======================================== */
 
-/* Manual dark mode toggle - token overrides */
 [data-theme='dark'] {
-  /* Core colors */
-  --color-bg: #0a0a0a;
-  --color-bg-alt: #111111;
-  --color-bg-offset: #1a1a1a;
-  --color-fg: #e5e5e5;
+  /* Legacy --color-* aliases */
+  --color-bg: #0d1116;
+  --color-bg-alt: #212730;
+  --color-bg-offset: #252f3d;
+  --color-fg: #ebe7e4;
   --color-fg-bold: #ffffff;
-  --color-fg-light: #b0b0b5;
+  --color-fg-light: #d5d8db;
   --color-white: #fff;
   --color-black: #000;
 
-  /* Overlay colors for dark mode */
   --color-overlay-light: rgba(255, 255, 255, 0.1);
-  --color-overlay-dark: rgba(0, 0, 0, 0.3);
-  --color-overlay-darker: rgba(0, 0, 0, 0.5);
+  --color-overlay-dark: rgba(0, 0, 0, 0.4);
+  --color-overlay-darker: rgba(0, 0, 0, 0.6);
 
-  /* Accent colors */
-  --color-accent: #60a5fa;
-  --color-accent-hover: #93c5fd;
-  --color-accent-light: color-mix(in srgb, var(--color-accent) 22%, transparent);
-  --color-accent-subtle: color-mix(in srgb, var(--color-accent) 15%, transparent);
+  --color-accent: #6a9fcc;
+  --color-accent-secondary: #6a9fcc;
+  --color-accent-hover: #8fc0e6;
+  --color-accent-light: color-mix(in srgb, var(--color-accent) 18%, transparent);
+  --color-accent-subtle: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  --color-accent-muted: color-mix(in srgb, var(--color-accent) 5%, transparent);
   --color-accent-border: color-mix(in srgb, var(--color-accent) 50%, transparent);
-  --color-accent-underline: color-mix(in srgb, var(--color-accent) 40%, transparent);
+  --color-accent-underline: color-mix(in srgb, var(--color-accent) 35%, transparent);
+  --color-accent-underline-strong: color-mix(in srgb, var(--color-accent) 55%, transparent);
 
-  /* Borders */
-  --color-border: rgba(255, 255, 255, 0.12);
-  --color-border-bg: rgba(255, 255, 255, 0.08);
-  --color-border-alt: rgba(255, 255, 255, 0.18);
+  --color-border: #49505980;
+  --color-border-bg: #49505950;
+  --color-border-alt: #757d8975;
 
-  /* Semantic surface tokens (eliminates hardcoded rgba in component overrides) */
-  --color-surface-subtle: rgba(255, 255, 255, 0.04);
-  --color-surface-hover: rgba(255, 255, 255, 0.08);
-  --color-surface-active: rgba(255, 255, 255, 0.12);
-  --color-text-muted: rgba(255, 255, 255, 0.6);
-  --color-text-dim: rgba(255, 255, 255, 0.7);
-  --color-fg-muted: rgba(255, 255, 255, 0.5);
+  --color-surface-subtle: #ffffff05;
+  --color-surface-hover: #ffffff09;
+  --color-surface-active: #ffffff12;
+  --color-text-muted: #9fa4abad;
+  --color-text-dim: #d5d8dbcc;
+  --color-fg-muted: #9fa4ab;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.05);
-  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.08);
-  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.5);
+  /* PI semantic tokens (cool dark) */
+  --bg-deep: #0d1116;
+  --bg-canvas: #161d27;
+  --panel: #212730e6;
+  --panel-soft: #252f3dd1;
+
+  --text: #ebe7e4;
+  --copy: #ebe7e4bf;
+  --muted: #9fa4abad;
+  --muted-strong: #d5d8dbcc;
+
+  --line: #49505980;
+  --line-strong: #757d8975;
+
+  --accent: #6a9fcc;
+  --accent-rust: #8f3222;
+
+  --focus-ring: #6a9fccb8;
+  --accent-border-hover: #6a9fcc6b;
+  --accent-border-active: #6a9fcc80;
+  --accent-underline-muted: #6a9fcc38;
+  --accent-surface-faint: #6a9fcc05;
+  --accent-surface-subtle: #6a9fcc0e;
+  --accent-surface-soft: #6a9fcc13;
+  --accent-surface-strong: #6a9fcc14;
+  --accent-fill-soft: #6a9fcc33;
+  --accent-outline-soft: #6a9fcc5c;
+
+  --control-background: #ffffff04;
+  --control-background-hover: #ffffff09;
+  --surface-tint: #ffffff05;
+
+  --selection-background: #6a9fcc3d;
+  --scrollbar-thumb: #2f5f8a47;
+  --scrollbar-thumb-hover: #2f5f8a66;
+
+  --page-grid-minor: hsl(218 60% 80% / 0.009375);
+  --page-grid-major: hsl(218 60% 80% / 0.02625);
+  --page-grid-cross: hsl(218 60% 80% / 0.075);
+  --page-bg: var(--bg-canvas);
+  --page-vignette-overlay: #0d11161f;
+
+  --install-box-shadow: #00000040;
 }
 
-/* Dark mode component overrides using semantic tokens */
-[data-theme='dark'] .site-header {
-  background-color: color-mix(in srgb, var(--color-bg-alt) 90%, transparent);
-  border-bottom-color: var(--color-border);
-}
-
-[data-theme='dark'] .nav-link:hover {
-  background-color: var(--color-surface-active);
-}
-
-[data-theme='dark'] .nav-link.active {
-  background-color: var(--color-accent-hover);
-}
-
-[data-theme='dark'] .site-footer-new {
-  background: linear-gradient(
-    to bottom,
-    var(--color-bg-alt) 0%,
-    color-mix(in srgb, var(--color-bg-alt) 92%, black) 100%
-  );
-}
-
-/* Homepage sections */
-[data-theme='dark'] .hero-chip {
-  background: rgba(255, 255, 255, 0.08);
-}
-
-[data-theme='dark'] .home-section {
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 0%, transparent 100%);
-}
-
-[data-theme='dark'] .work-card {
-  background: var(--color-bg-alt);
-  border-color: var(--color-border);
-}
-
-[data-theme='dark'] .work-card:hover {
-  border-color: var(--color-accent);
-  box-shadow: var(--shadow-lg);
-}
-
-/* Portrait - soften white background for dark mode */
+/* Portrait: gently soften against the cool dark background. */
 [data-theme='dark'] .theme-portrait img {
-  filter: brightness(0.85);
-}
-
-/* Resume nav - dark mode uses same styles, just inherits dark tokens */
-
-/* Job cards in dark mode */
-[data-theme='dark'] .jobs-container {
-  background: var(--color-surface-subtle);
-  border-color: var(--color-border);
-}
-
-[data-theme='dark'] .jobs-container:hover {
-  border-color: var(--color-border-alt);
-}
-
-/* Course cards */
-[data-theme='dark'] .course-container a {
-  background: var(--color-surface-subtle);
-  border-color: var(--color-border);
-}
-
-[data-theme='dark'] .course-container a:hover {
-  background: var(--color-surface-hover);
-  border-color: var(--color-border-alt);
-}
-
-/* Skill buttons/tags */
-[data-theme='dark'] .skillbutton,
-[data-theme='dark'] .skill-tag {
-  background: var(--color-surface-subtle);
-  border-color: var(--color-border);
-}
-
-[data-theme='dark'] .skillbutton:hover,
-[data-theme='dark'] .skill-tag:hover {
-  background: var(--color-surface-hover);
-}
-
-/* Contact page */
-[data-theme='dark'] .contact-email-link {
-  background: color-mix(in srgb, var(--color-accent) 20%, transparent);
-}
-
-[data-theme='dark'] .contact-email-link:hover {
-  background: color-mix(in srgb, var(--color-accent) 30%, transparent);
-}
-
-[data-theme='dark'] .contact-email-link--invalid,
-[data-theme='dark'] .contact-email-link--invalid:hover {
-  background: var(--color-border-bg);
-}
-
-[data-theme='dark'] .contact-content > .icons li a:hover {
-  background: color-mix(in srgb, var(--color-accent) 20%, transparent);
-}
-
-[data-theme='dark'] .daterange,
-[data-theme='dark'] .degree-container .school {
-  color: var(--color-text-dim);
-}
-
-/* Misc dark mode overrides */
-[data-theme='dark'] body::before {
-  opacity: 0.015;
-}
-
-[data-theme='dark'] .skillbar,
-[data-theme='dark'] code {
-  background: var(--color-surface-hover);
-  border-color: var(--color-border-bg);
-}
-
-[data-theme='dark'] blockquote {
-  border-left-color: var(--color-border-alt);
-}
-
-/* Link underlines */
-[data-theme='dark'] p a:not(.hero-highlight),
-[data-theme='dark'] li a:not(.hero-highlight) {
-  background-image: linear-gradient(
-    transparent calc(100% - 1.5px),
-    var(--color-accent-underline) 1.5px
-  );
-}
-
-[data-theme='dark'] p a:not(.hero-highlight):hover,
-[data-theme='dark'] li a:not(.hero-highlight):hover {
-  background-image: linear-gradient(transparent calc(100% - 1.5px), var(--color-accent) 1.5px);
-}
-
-/* Featured cards */
-[data-theme='dark'] .featured-card {
-  background: var(--color-bg-alt);
-  border-color: var(--color-border);
-}
-
-[data-theme='dark'] .featured-card:hover {
-  background: var(--color-bg-offset);
-  border-color: var(--color-accent-border);
-}
-
-/* Prose links use text-decoration only, no background-image */
-[data-theme='dark'] .prose a,
-[data-theme='dark'] .prose p a,
-[data-theme='dark'] .prose li a,
-[data-theme='dark'] .prose a:hover,
-[data-theme='dark'] .prose p a:hover,
-[data-theme='dark'] .prose li a:hover {
-  background-image: none;
+  filter: brightness(0.9);
 }

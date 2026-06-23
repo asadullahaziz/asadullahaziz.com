@@ -62,9 +62,7 @@
 
 .projects-grid--featured .project-card {
   grid-column: 1 / -1;
-  box-shadow:
-    var(--shadow-lg),
-    0 0 0 2px var(--color-accent-light);
+  border-color: var(--accent-border-muted, var(--accent-border-hover));
 }
 
 @media screen and (min-width: 600px) {
@@ -78,20 +76,17 @@
 }
 
 .project-card {
-  background: var(--color-bg);
-  border-radius: var(--radius-lg);
+  background: var(--panel);
+  border-radius: var(--radius-md);
   overflow: hidden;
-  border: 1px solid var(--color-border-bg);
-  box-shadow: var(--shadow-sm);
-  transition: all var(--duration-normal) var(--ease-out);
+  border: 1px solid var(--line);
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    background var(--duration-fast) var(--ease-out);
 }
 
 .project-card:hover {
-  transform: translateY(var(--lift-md));
-  border-color: var(--color-accent-border);
-  box-shadow:
-    var(--shadow-xl),
-    0 0 0 1px var(--color-accent-border);
+  border-color: var(--accent-border-hover);
 }
 
 /* Full card link wrapper */
@@ -139,7 +134,7 @@
 }
 
 .project-card:hover .project-card-image img {
-  transform: scale(var(--scale-sm));
+  transform: scale(1.02);
 }
 
 .project-card-overlay {
@@ -158,8 +153,9 @@
 }
 
 .project-card-title {
+  font-family: var(--font-serif);
   font-size: var(--text-xl);
-  font-weight: var(--font-weight-black);
+  font-weight: var(--font-weight-bold);
   margin-bottom: 0.35rem;
 }
 
@@ -204,14 +200,11 @@
 .jobs-container {
   margin-bottom: 2rem;
   padding: 2rem;
-  background: var(--color-bg);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border);
+  background: var(--panel);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
   position: relative;
-  transition:
-    border-color var(--duration-fast) var(--ease-out),
-    transform var(--duration-fast) var(--ease-out),
-    box-shadow var(--duration-fast) var(--ease-out);
+  transition: border-color var(--duration-fast) var(--ease-out);
 }
 
 .jobs-container::before {
@@ -220,17 +213,14 @@
   left: 0;
   top: 1.5rem;
   bottom: 1.5rem;
-  width: 3px;
-  background: linear-gradient(180deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%);
-  border-radius: 2px;
+  width: 2px;
+  background: var(--accent);
   opacity: 0;
   transition: opacity var(--duration-fast) var(--ease-out);
 }
 
 .jobs-container:hover {
-  border-color: var(--color-accent-border);
-  transform: translateY(var(--lift-sm));
-  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-border-hover);
 }
 
 .jobs-container:hover::before {
@@ -242,8 +232,9 @@
 }
 
 .jobs-container header h4 {
+  font-family: var(--font-serif);
   font-size: var(--text-xl);
-  font-weight: var(--font-weight-black);
+  font-weight: var(--font-weight-bold);
   margin-bottom: 0.35rem;
   line-height: 1.3;
 }
@@ -345,31 +336,34 @@
 .course-container a {
   display: block;
   padding: 1rem 1.25rem;
-  background: var(--color-surface-subtle);
-  border: 1px solid var(--color-border-bg);
+  background: var(--control-background);
+  border: 1px solid var(--line);
   border-radius: var(--radius-md);
   text-decoration: none;
-  transition: all var(--duration-fast) var(--ease-out);
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    background var(--duration-fast) var(--ease-out);
 }
 
 .course-container a:hover {
-  border-color: var(--color-border);
-  background: var(--color-surface-hover);
-  transform: translateY(var(--lift-sm));
+  border-color: var(--accent-border-hover);
+  background: var(--control-background-hover);
 }
 
 .courses .course-number {
   display: block;
-  font-size: var(--text-sm);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-accent);
-  margin-bottom: 0.25rem;
+  font-family: var(--font-accent-mono);
+  font-size: 0.72rem;
+  letter-spacing: var(--label-letter-spacing);
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
 }
 
 .courses .course-name {
   display: block;
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   font-size: var(--text-base);
   font-weight: var(--font-weight-medium);
-  color: var(--color-fg);
+  color: var(--text);
 }

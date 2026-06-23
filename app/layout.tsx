@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Raleway, Source_Sans_3 } from 'next/font/google';
+import { IBM_Plex_Mono, Silkscreen, Spectral } from 'next/font/google';
 import Script from 'next/script';
 
 import GoogleTagManager from '@/components/Template/GoogleTagManager';
@@ -19,22 +19,36 @@ import './tailwind.css';
 const twitterHandle = TWITTER_HANDLE.trim();
 const homepageTitle = `${AUTHOR_NAME} | Senior Software Engineer (AI/LLM)`;
 
-const sourceSans = Source_Sans_3({
-  weight: ['400', '700'],
+// Serif body/headings — closest Google Fonts match to pi.dev's Plantin MT Pro.
+const spectral = Spectral({
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
   subsets: ['latin'],
-  variable: '--font-source-sans',
+  variable: '--font-serif-google',
   display: 'swap',
   preload: true,
   adjustFontFallback: true,
 });
 
-const raleway = Raleway({
-  weight: ['400', '800'],
+// Monospace for code/forms — closest Google Fonts match to pi.dev's Commit Mono.
+const plexMono = IBM_Plex_Mono({
+  weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
-  variable: '--font-raleway',
+  variable: '--font-mono-google',
   display: 'swap',
   preload: true,
   adjustFontFallback: true,
+});
+
+// Pixel/bitmap accent font for labels, nav, buttons — closest Google Fonts
+// match to pi.dev's Departure Mono.
+const silkscreen = Silkscreen({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-accent-mono-google',
+  display: 'swap',
+  preload: false,
+  adjustFontFallback: false,
 });
 
 const siteDescription =
@@ -128,7 +142,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${sourceSans.variable} ${raleway.variable}`}
+      className={`${spectral.variable} ${plexMono.variable} ${silkscreen.variable}`}
       suppressHydrationWarning
     >
       <head>

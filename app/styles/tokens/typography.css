@@ -5,20 +5,38 @@
 
 @theme {
   /* ===================
-     FONT FAMILIES
+     FONT FAMILIES (modeled on pi.dev: serif body, mono code, pixel accent)
      =================== */
-  --font-sans: var(--font-source-sans), 'Source Sans Pro', Helvetica, sans-serif;
-  --font-heading: var(--font-raleway), 'Raleway', Helvetica, sans-serif;
-  --font-mono: 'Courier New', monospace;
+  --font-serif:
+    var(--font-serif-google, 'Spectral'), 'Plantin MT Pro', Georgia, Cambria, 'Times New Roman',
+    Times, serif;
+  --font-mono:
+    var(--font-mono-google, 'IBM Plex Mono'), 'Commit Mono', 'SFMono-Regular', ui-monospace, Menlo,
+    Monaco, Consolas, monospace;
+  --font-accent-mono:
+    var(--font-accent-mono-google, 'Silkscreen'), 'Departure Mono', var(--font-mono);
+
+  /* Body/heading aliases map onto the serif so legacy references stay valid. */
+  --font-sans: var(--font-serif);
+  --font-heading: var(--font-serif);
 
   /* ===================
      FONT WEIGHTS
      =================== */
-  --font-weight-normal: 400;
-  --font-weight-medium: 600;
+  --font-weight-normal: 450;
+  --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-  --font-weight-black: 800;
+  --font-weight-black: 700;
+
+  /* ===================
+     PI TYPE TOKENS
+     =================== */
+  --body-copy-font-size: 1rem;
+  --body-copy-font-weight: 450;
+  --body-copy-line-height: 1.55;
+  --label-letter-spacing: 0.12em;
+  --label-font-size: 0.84rem;
 
   /* ===================
      FONT SIZES (relative units)

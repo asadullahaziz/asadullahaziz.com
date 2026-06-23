@@ -21,7 +21,10 @@ describe('Hero', () => {
   it('renders the tagline content', () => {
     render(<Hero />);
 
-    expect(screen.getByText(/Senior Software Engineer/i)).toBeInTheDocument();
+    // Appears in both the accent-mono eyebrow and the tagline copy.
+    expect(
+      screen.getAllByText(/Senior Software Engineer/i).length,
+    ).toBeGreaterThan(0);
     expect(screen.getByText(/5\+ years/i)).toBeInTheDocument();
   });
 

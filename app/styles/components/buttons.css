@@ -4,80 +4,100 @@
    ======================================== */
 
 @layer components {
-  /* Button - Modern solid style with hover lift */
+  /* Button - pi.dev "bracket" control: squared, uppercase accent-mono,
+     [ LABEL ] brackets that ease outward on hover. */
   .btn,
   .button {
     appearance: none;
-    background: var(--color-accent);
-    background-image: none !important;
-    border: 0;
-    border-radius: var(--radius-sm);
-    box-shadow:
-      var(--shadow-md),
-      inset 0 1px 0 var(--color-overlay-light);
-    color: var(--color-white);
-    cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5em;
-    font-family: var(--font-heading);
-    font-size: var(--text-base);
-    font-weight: var(--font-weight-bold);
-    height: 3.25rem;
-    letter-spacing: var(--tracking-normal);
-    padding: 0 2em;
+    min-height: 44px;
+    padding: 0.6rem 0.9rem;
+    background: var(--control-background);
+    background-image: none !important;
+    border: 1px solid var(--line);
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--muted-strong);
+    cursor: pointer;
+    font-family: var(--font-accent-mono);
+    font-size: 0.74rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    line-height: normal;
     text-align: center;
+    text-transform: uppercase;
     text-decoration: none !important;
     transition:
-      transform var(--duration-fast) var(--ease-out),
-      box-shadow var(--duration-fast) var(--ease-out),
-      background-color var(--duration-fast) var(--ease-out);
+      border-color 140ms ease,
+      color 140ms ease,
+      background 140ms ease;
+  }
+
+  .btn::before,
+  .button::before {
+    content: '[';
+    margin-right: 0.7ch;
+    color: var(--accent);
+    transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .btn::after,
+  .button::after {
+    content: ']';
+    margin-left: 0.7ch;
+    color: var(--accent);
+    transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .btn:hover,
-  .button:hover {
-    background: color-mix(in srgb, var(--color-accent) 85%, black);
-    box-shadow: var(--shadow-lg);
-    transform: translateY(var(--lift-sm));
-    color: var(--color-white);
+  .button:hover,
+  .btn:focus-visible,
+  .button:focus-visible {
+    border-color: var(--accent-border-hover);
+    background: var(--control-background-hover);
+    color: var(--text);
   }
 
-  .btn:active,
-  .button:active {
-    transform: translateY(0);
-    box-shadow: var(--shadow-sm);
+  .btn:hover::before,
+  .button:hover::before,
+  .btn:focus-visible::before,
+  .button:focus-visible::before {
+    transform: translateX(-4px);
+  }
+
+  .btn:hover::after,
+  .button:hover::after,
+  .btn:focus-visible::after,
+  .button:focus-visible::after {
+    transform: translateX(4px);
   }
 
   .btn:focus-visible,
   .button:focus-visible {
-    box-shadow:
-      var(--shadow-md),
-      0 0 0 3px var(--color-accent-light);
-    outline: none;
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
   }
 
-  /* Primary button (explicit alias - .button is already primary-styled) */
+  /* Primary button - accent-filled bracket variant */
   .btn-primary,
   .button-primary {
-    /* Inherits from .button - accent color is the primary style */
+    border-color: var(--accent-border-active);
+    background: var(--accent-surface-soft);
+    color: var(--text);
   }
 
   /* Secondary/ghost button variant */
   .btn-secondary,
   .button-secondary {
     background: transparent;
-    box-shadow: inset 0 0 0 1.5px var(--color-border-alt);
-    color: var(--color-fg-light);
-    font-weight: var(--font-weight-medium);
   }
 
   .btn-secondary:hover,
   .button-secondary:hover {
-    background: var(--color-accent-light);
-    box-shadow: inset 0 0 0 1.5px var(--color-accent);
-    color: var(--color-accent);
-    transform: translateY(var(--lift-sm));
+    background: var(--control-background-hover);
   }
 
   /* Actions list */

@@ -1,66 +1,118 @@
 /* ========================================
    COLOR TOKENS
-   Core color palette and semantic colors
+   Palette modeled on the live pi.dev design system.
+   Default (:root) = LIGHT "parchment" theme.
+   Dark "cool" theme overrides live in dark-mode.css ([data-theme='dark']).
    ======================================== */
 
 @theme {
   /* ===================
-     CORE PALETTE
+     CORE PALETTE (light / parchment)
+     Legacy --color-* names kept so existing components keep working.
      =================== */
-  --color-bg: #ffffff;
-  --color-bg-alt: #f5f5f7;
-  --color-bg-offset: #f0f0f2;
-  --color-fg: #1d1d1f;
-  --color-fg-bold: #1d1d1f;
-  --color-fg-light: #58585d;
+  --color-bg: #ebe7e4; /* canvas / moonstone */
+  --color-bg-alt: #f4f2f0; /* panel */
+  --color-bg-offset: #eef1f3; /* panel-soft */
+  --color-fg: #252f3d; /* evening blue */
+  --color-fg-bold: #252f3d;
+  --color-fg-light: #384251;
 
   /* ===================
      ACCENT COLORS
      =================== */
-  --color-accent: #2e59ba;
-  --color-accent-secondary: #60a5fa;
-  --color-accent-hover: #2e59ba;
+  --color-accent: #4b607c; /* tidal blue */
+  --color-accent-secondary: #6a9fcc; /* accent blue */
+  --color-accent-hover: #3a4d66;
   --color-accent-light: color-mix(in srgb, var(--color-accent) 12%, transparent);
-  --color-accent-subtle: color-mix(in srgb, var(--color-accent) 5%, transparent);
+  --color-accent-subtle: color-mix(in srgb, var(--color-accent) 6%, transparent);
   --color-accent-muted: color-mix(in srgb, var(--color-accent) 3%, transparent);
   --color-accent-underline: color-mix(in srgb, var(--color-accent) 30%, transparent);
-  --color-accent-underline-strong: color-mix(in srgb, var(--color-accent) 40%, transparent);
+  --color-accent-underline-strong: color-mix(in srgb, var(--color-accent) 45%, transparent);
   --color-accent-glow: color-mix(in srgb, var(--color-accent) 15%, transparent);
   --color-accent-border: color-mix(in srgb, var(--color-accent) 50%, transparent);
 
   /* ===================
-     SKILL CATEGORY COLORS
+     SKILL CATEGORY COLORS (mapped to pi palette)
      =================== */
-  --color-skill-1: #6968b3;
-  --color-skill-2: #37b1f5;
-  --color-skill-3: #40494e;
-  --color-skill-4: #515dd4;
-  --color-skill-5: #e47272;
-  --color-skill-6: #cc7b94;
+  --color-skill-1: #4b607c; /* tidal blue */
+  --color-skill-2: #6a9fcc; /* accent blue */
+  --color-skill-3: #5c5752; /* driftwood */
+  --color-skill-4: #b86b52; /* terracotta light */
+  --color-skill-5: #a3a473; /* sage */
+  --color-skill-6: #e1b06e; /* sunkissed */
 
   /* ===================
      BORDER COLORS
      =================== */
-  --color-border: rgba(0, 0, 0, 0.1);
-  --color-border-bg: rgba(0, 0, 0, 0.06);
-  --color-border-alt: rgba(0, 0, 0, 0.15);
+  --color-border: #8b847d59;
+  --color-border-bg: #8b847d33;
+  --color-border-alt: #5c575259;
 
   /* ===================
      SURFACE TOKENS
      =================== */
-  --color-surface-subtle: rgba(0, 0, 0, 0.03);
-  --color-surface-hover: rgba(0, 0, 0, 0.06);
-  --color-surface-active: rgba(0, 0, 0, 0.1);
-  --color-text-muted: rgba(0, 0, 0, 0.5);
-  --color-text-dim: rgba(0, 0, 0, 0.6);
-  --color-fg-muted: rgba(0, 0, 0, 0.5);
+  --color-surface-subtle: #252f3d08;
+  --color-surface-hover: #252f3d10;
+  --color-surface-active: #252f3d14;
+  --color-text-muted: #5c5752c4;
+  --color-text-dim: #5c5752;
+  --color-fg-muted: #5c5752;
 
   /* ===================
      SEMANTIC COLORS
      =================== */
   --color-white: #fff;
   --color-black: #000;
-  --color-overlay-light: rgba(255, 255, 255, 0.15);
-  --color-overlay-dark: rgba(0, 0, 0, 0.15);
-  --color-overlay-darker: rgba(0, 0, 0, 0.3);
+  --color-overlay-light: rgba(255, 255, 255, 0.5);
+  --color-overlay-dark: rgba(37, 47, 61, 0.12);
+  --color-overlay-darker: rgba(37, 47, 61, 0.3);
+}
+
+/* ========================================
+   PI SEMANTIC TOKENS (light / parchment)
+   The expressive layer used by the redesigned styles.
+   ======================================== */
+:root {
+  --bg-deep: #dacbc2; /* parchment */
+  --bg-canvas: #ebe7e4; /* moonstone */
+  --panel: #f4f2f0;
+  --panel-soft: #eef1f3;
+
+  --text: #252f3df5;
+  --copy: #384251dc;
+  --muted: #5c5752c4;
+  --muted-strong: #394352d6;
+
+  --line: #8b847d59;
+  --line-strong: #5c575240;
+
+  --accent: #4b607c; /* tidal blue */
+  --accent-rust: #b86b52;
+
+  --focus-ring: #4b607c80;
+  --accent-border-hover: #4b607c59;
+  --accent-border-active: #4b607c73;
+  --accent-underline-muted: #4b607c3d;
+  --accent-surface-faint: #4b607c04;
+  --accent-surface-subtle: #4b607c0c;
+  --accent-surface-soft: #4b607c10;
+  --accent-surface-strong: #4b607c14;
+  --accent-fill-soft: #4b607c21;
+  --accent-outline-soft: #4b607c45;
+
+  --control-background: #252f3d08;
+  --control-background-hover: #252f3d10;
+  --surface-tint: #252f3d0d;
+
+  --selection-background: #4b607c24;
+  --scrollbar-thumb: #4b607c3d;
+  --scrollbar-thumb-hover: #4b607c59;
+
+  --page-grid-minor: #252f3d08;
+  --page-grid-major: #252f3d12;
+  --page-grid-cross: #252f3d1d;
+  --page-bg: var(--bg-canvas);
+  --page-vignette-overlay: #ebe7e426;
+
+  --install-box-shadow: #00000014;
 }

@@ -28,25 +28,27 @@
     justify-content: center;
     width: 2.5em;
     height: 2.5em;
+    border: 1px solid var(--line);
     border-radius: var(--radius-sm);
-    color: var(--color-fg-light);
+    background: var(--control-background);
+    color: var(--muted-strong);
     text-decoration: none;
     background-image: none !important;
     transition:
       color var(--duration-fast) var(--ease-out),
-      background-color var(--duration-fast) var(--ease-out),
-      transform var(--duration-fast) var(--ease-out);
+      border-color var(--duration-fast) var(--ease-out),
+      background-color var(--duration-fast) var(--ease-out);
   }
 
   .icons li a:hover {
-    background-color: var(--color-accent-light);
-    color: var(--color-accent);
-    transform: translateY(var(--lift-sm));
+    background-color: var(--control-background-hover);
+    border-color: var(--accent-border-hover);
+    color: var(--text);
   }
 
   /* Icons in main content area are darker */
   .post .icons li a,
   article .icons li a {
-    color: var(--color-fg);
+    color: var(--text);
   }
 }

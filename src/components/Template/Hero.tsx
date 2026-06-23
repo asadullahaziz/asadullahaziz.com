@@ -12,6 +12,10 @@ export default function Hero() {
           <ThemePortrait width={160} height={160} priority />
         </div>
 
+        <span className="hero-eyebrow">
+          Senior Software Engineer · AI / LLM
+        </span>
+
         <h1 className="hero-title">
           <span className="hero-name">Asad Ullah Aziz</span>
         </h1>
