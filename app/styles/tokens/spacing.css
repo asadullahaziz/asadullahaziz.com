@@ -34,8 +34,9 @@
   /* ===================
      LAYOUT DIMENSIONS
      =================== */
-  --header-height: 4rem;
-  --header-height-mobile: 3.5rem;
+  /* Total clearance for the floating nav (top pad + bordered panel). */
+  --header-height: 5.25rem;
+  --header-height-mobile: 4.75rem;
   --sidebar-width: 20rem;
   --content-max-width: 90rem;
 

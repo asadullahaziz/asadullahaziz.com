@@ -1,21 +1,14 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 import ThemeToggle from '../../Template/ThemeToggle';
 
 describe('ThemeToggle', () => {
   beforeEach(() => {
     window.localStorage.clear();
-    Object.defineProperty(window, 'matchMedia', {
-      writable: true,
-      value: vi.fn().mockImplementation((query) => ({
-        matches: query === '(prefers-color-scheme: dark)',
-        media: query,
-        onchange: null,
-        addEventListener: vi.fn(),
-        removeEventListener: vi.fn(),
-      })),
-    });
+    // The no-flash script in the app layout owns the initial data-theme;
+    // here we set it directly to simulate that, then let the toggle flip it.
+    document.documentElement.removeAttribute('data-theme');
   });
 
   it('renders theme toggle button', async () => {
@@ -26,84 +19,40 @@ describe('ThemeToggle', () => {
     });
   });
 
-  it('uses dark mode when system prefers dark', async () => {
+  it('has an accessible label', async () => {
     render(<ThemeToggle />);
 
     await waitFor(() => {
       expect(screen.getByRole('button')).toHaveAttribute(
         'aria-label',
-        'Switch to light mode',
+        expect.stringMatching(/theme/i),
       );
     });
   });
 
-  it('uses light mode when system prefers light', async () => {
-    Object.defineProperty(window, 'matchMedia', {
-      writable: true,
-      value: vi.fn().mockImplementation(() => ({
-        matches: false,
-        media: '',
-        addEventListener: vi.fn(),
-        removeEventListener: vi.fn(),
-      })),
-    });
-
+  it('toggles from dark to light and persists', async () => {
+    document.documentElement.setAttribute('data-theme', 'dark');
     render(<ThemeToggle />);
 
-    await waitFor(() => {
-      expect(screen.getByRole('button')).toHaveAttribute(
-        'aria-label',
-        'Switch to dark mode',
-      );
-    });
-  });
-
-  it('respects localStorage preference', async () => {
-    window.localStorage.setItem('theme', 'light');
-    render(<ThemeToggle />);
+    const button = await screen.findByRole('button');
+    fireEvent.click(button);
 
     await waitFor(() => {
-      expect(screen.getByRole('button')).toHaveAttribute(
-        'aria-label',
-        'Switch to dark mode',
-      );
-    });
-  });
-
-  it('toggles theme on click', async () => {
-    window.localStorage.setItem('theme', 'dark');
-    render(<ThemeToggle />);
-
-    await waitFor(() => {
-      expect(screen.getByRole('button')).toHaveAttribute(
-        'aria-label',
-        'Switch to light mode',
-      );
-    });
-
-    fireEvent.click(screen.getByRole('button'));
-
-    await waitFor(() => {
-      expect(screen.getByRole('button')).toHaveAttribute(
-        'aria-label',
-        'Switch to dark mode',
-      );
+      expect(document.documentElement.getAttribute('data-theme')).toBe('light');
       expect(window.localStorage.getItem('theme')).toBe('light');
     });
   });
 
-  it('updates document data-theme attribute', async () => {
-    window.localStorage.setItem('theme', 'dark');
+  it('toggles from light to dark and persists', async () => {
+    document.documentElement.setAttribute('data-theme', 'light');
     render(<ThemeToggle />);
+
+    const button = await screen.findByRole('button');
+    fireEvent.click(button);
 
     await waitFor(() => {
       expect(document.documentElement.getAttribute('data-theme')).toBe('dark');
-    });
-
-    fireEvent.click(screen.getByRole('button'));
-
-    await waitFor(() => {
-      expect(document.documentElement.getAttribute('data-theme')).toBe('light');
+      expect(window.localStorage.getItem('theme')).toBe('dark');
     });
   });
 });

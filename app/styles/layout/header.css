@@ -3,32 +3,46 @@
    Fixed navigation with glassmorphism
    ======================================== */
 
-/* Header - fixed navigation, pi.dev sticky-nav treatment */
+/* Header - pi.dev floating nav: a transparent full-width wrapper with a
+   centered, bordered panel that hovers above the page content. */
 .site-header {
-  align-items: center;
-  background-color: color-mix(in srgb, var(--bg-canvas) 82%, transparent);
-  backdrop-filter: blur(12px) saturate(140%);
-  -webkit-backdrop-filter: blur(12px) saturate(140%);
-  border-bottom: solid 1px var(--line-strong);
-  display: flex;
-  height: var(--header-height);
-  justify-content: space-between;
-  left: 0;
-  line-height: var(--header-height);
-  padding: 0 2rem;
+  --sticky-nav-inline-pad: 2rem;
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
+  padding: 0.8rem var(--sticky-nav-inline-pad) 0;
   z-index: var(--z-header);
-  transition: background-color var(--duration-fast) var(--ease-out);
+  background: transparent;
   box-sizing: border-box;
+  pointer-events: none;
+}
+
+/* The visible floating bar. */
+.site-nav-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: min(100%, 64rem);
+  margin: 0 auto;
+  padding: 0.7rem 0.95rem;
+  background: var(--nav-panel-background);
+  border: 1px solid var(--nav-panel-border);
+  border-top-color: var(--nav-panel-highlight);
+  border-radius: 0;
+  pointer-events: auto;
 }
 
 @media (max-width: 736px) {
   .site-header {
-    height: var(--header-height-mobile);
-    line-height: var(--header-height-mobile);
-    padding: 0 1rem;
+    --sticky-nav-inline-pad: 1rem;
+  }
+
+  .site-nav-inner {
+    padding: 0.6rem 0.85rem;
   }
 }
 

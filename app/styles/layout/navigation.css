@@ -5,9 +5,9 @@
 
 .site-logo {
   position: relative;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  height: var(--header-height);
+  color: var(--text);
   text-decoration: none;
 }
 
@@ -23,15 +23,15 @@
   color: var(--accent);
 }
 
-@media (max-width: 736px) {
-  .site-logo {
-    height: var(--header-height-mobile);
-  }
-}
-
+/* Page links: centered in the floating bar (pi.dev sticky-nav-page-links). */
 .nav-links {
   display: none;
-  gap: 0.625rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.65rem, 1.5vw, 1.25rem);
 }
 
 @media screen and (min-width: 736px) {
@@ -40,59 +40,36 @@
   }
 }
 
-.nav-link {
+.nav-link,
+.nav-link:visited {
   position: relative;
-  padding: 0.5rem 0.7rem;
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-family: var(--font-accent-mono);
+  font-variant-ligatures: none;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  line-height: 1;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--muted-strong);
+  white-space: nowrap;
+  color: var(--nav-page-link-color);
   text-decoration: none;
-  border-radius: var(--radius-sm);
-  transition:
-    color var(--duration-fast) var(--ease-out),
-    background-color var(--duration-fast) var(--ease-out);
+  transition: color var(--duration-fast) var(--ease-out);
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0.15rem;
-  left: 0.7rem;
-  right: 0.7rem;
-  height: 1.5px;
-  background: var(--accent);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--duration-fast) var(--ease-out);
-}
-
-.nav-link:hover {
-  color: var(--text);
-}
-
-.nav-link:hover::after {
-  transform: scaleX(1);
-}
-
+.nav-link:hover,
+.nav-link:focus-visible,
 .nav-link.active {
-  color: var(--text);
-  background: var(--accent-surface-subtle);
-}
-
-.nav-link.active::after {
-  transform: scaleX(1);
-}
-
-.nav-link:focus-visible {
   color: var(--text);
   outline: none;
 }
 
-.nav-link:focus-visible::after {
-  transform: scaleX(1);
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -0.42em;
+  left: 0;
+  height: 1px;
+  background: var(--active-stripe);
 }
 
 .nav-actions {
@@ -101,47 +78,124 @@
   gap: 0.75rem;
 }
 
-/* Theme Toggle */
+/* Theme Toggle — pi.dev footer toggle treatment: stacked icon + label,
+   cross-fading sun/moon. Two-state (light/dark), keyed off [data-theme]. */
 .theme-toggle {
-  display: flex;
+  --theme-toggle-inline-size: 2.277778rem;
+  --theme-toggle-icon-size: 0.944444rem;
+  --theme-toggle-label-block-size: 0.555556rem;
+  --theme-toggle-label-font-size: 0.472222rem;
+  --theme-toggle-gap: 0.166667rem;
+
+  display: inline-flex;
+  position: relative;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  inline-size: var(--theme-toggle-inline-size);
+  block-size: calc(
+    var(--theme-toggle-icon-size) + var(--theme-toggle-gap) + var(--theme-toggle-label-block-size)
+  );
   padding: 0;
-  background: var(--control-background);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
+  border: 0;
+  overflow: visible;
+  background: transparent;
   color: var(--muted-strong);
+  line-height: 0;
   cursor: pointer;
-  transition:
-    color var(--duration-fast) var(--ease-out),
-    border-color var(--duration-fast) var(--ease-out),
-    background var(--duration-fast) var(--ease-out);
-}
-
-.theme-toggle:hover {
-  color: var(--text);
-  border-color: var(--accent-border-hover);
-  background: var(--control-background-hover);
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .theme-toggle:focus-visible {
+  outline: 1px solid var(--focus-ring);
+  outline-offset: 0.14rem;
   color: var(--text);
-  border-color: var(--accent-border-active);
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 2px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .theme-toggle:hover {
+    color: var(--text);
+  }
+}
+
+.theme-toggle:active {
+  transform: translateY(1px);
+}
+
+.theme-toggle-visual {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  inline-size: 100%;
+  gap: var(--theme-toggle-gap);
+}
+
+.theme-toggle-icon-stack {
+  position: relative;
+  inline-size: var(--theme-toggle-icon-size);
+  block-size: var(--theme-toggle-icon-size);
+  overflow: visible;
 }
 
 .theme-toggle-icon {
-  display: flex;
+  position: absolute;
+  inset: 0;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  transition: opacity 120ms linear;
+}
+
+.theme-toggle-icon > svg {
+  inline-size: 100%;
+  block-size: 100%;
+  flex: none;
+}
+
+.theme-toggle-label-stack {
+  position: relative;
+  inline-size: 100%;
+  block-size: var(--theme-toggle-label-block-size);
+}
+
+.theme-toggle-label {
+  position: absolute;
+  inset: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  color: currentColor;
+  font-family: var(--font-accent-mono);
+  font-size: var(--theme-toggle-label-font-size);
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: opacity 120ms linear;
+}
+
+[data-theme='light'] .theme-toggle-icon--sun,
+[data-theme='light'] .theme-toggle-label--light,
+[data-theme='dark'] .theme-toggle-icon--moon,
+[data-theme='dark'] .theme-toggle-label--dark {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle:active {
+    transform: none;
+  }
+
+  .theme-toggle-icon,
+  .theme-toggle-label {
+    transition-duration: 0.01ms;
+  }
 }
 
 .theme-toggle-placeholder {
-  width: 44px;
-  height: 44px;
+  inline-size: 2.277778rem;
+  block-size: calc(0.944444rem + 0.166667rem + 0.555556rem);
 }
 
 /* Hide hamburger on desktop */

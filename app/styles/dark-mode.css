@@ -83,6 +83,16 @@
   --page-vignette-overlay: #0d11161f;
 
   --install-box-shadow: #00000040;
+
+  /* Floating nav panel (dark) */
+  --thread-blue: #4b607c;
+  --active-stripe: linear-gradient(90deg, var(--accent) 0 62%, var(--thread-blue) 62% 100%);
+  --nav-panel-background:
+    linear-gradient(180deg, #212730f7, #0d1116e8), linear-gradient(90deg, #4b607c24, #2f5f8a14);
+  --nav-panel-border: #495059bd;
+  --nav-panel-highlight: #9fa4ab47;
+  --nav-link-color: #d5d8dbad;
+  --nav-page-link-color: #d5d8dbb8;
 }
 
 /* Portrait: gently soften against the cool dark background. */

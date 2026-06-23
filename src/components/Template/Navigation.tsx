@@ -20,28 +20,34 @@ export default function Navigation() {
 
   return (
     <header className="site-header">
-      <Link href="/" className="site-logo" aria-label={`${AUTHOR_NAME}, home`}>
-        <LogoMark className="logo-mark" />
-      </Link>
+      <div className="site-nav-inner">
+        <Link
+          href="/"
+          className="site-logo"
+          aria-label={`${AUTHOR_NAME}, home`}
+        >
+          <LogoMark className="logo-mark" />
+        </Link>
 
-      <nav className="nav-links">
-        {routes
-          .filter((l) => !l.index)
-          .map((l) => (
-            <Link
-              key={l.label}
-              href={l.path}
-              className={`nav-link ${isActive(l.path) ? 'active' : ''}`}
-              aria-current={isActive(l.path) ? 'page' : undefined}
-            >
-              {l.label}
-            </Link>
-          ))}
-      </nav>
+        <nav className="nav-links" aria-label="Primary navigation">
+          {routes
+            .filter((l) => !l.index)
+            .map((l) => (
+              <Link
+                key={l.label}
+                href={l.path}
+                className={`nav-link ${isActive(l.path) ? 'active' : ''}`}
+                aria-current={isActive(l.path) ? 'page' : undefined}
+              >
+                {l.label}
+              </Link>
+            ))}
+        </nav>
 
-      <div className="nav-actions">
-        <ThemeToggle />
-        <Hamburger />
+        <div className="nav-actions">
+          <ThemeToggle />
+          <Hamburger />
+        </div>
       </div>
     </header>
   );
