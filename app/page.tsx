@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <PageWrapper>
+    <PageWrapper mainClassName="page-main--wide">
       <WebSiteSchema />
       <PersonSchema />
       <Hero />
