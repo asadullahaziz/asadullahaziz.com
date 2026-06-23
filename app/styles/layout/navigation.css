@@ -13,8 +13,8 @@
 
 .logo-mark {
   display: block;
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
   color: var(--text);
   transition: color var(--duration-fast) var(--ease-out);
 }
@@ -45,7 +45,7 @@
   position: relative;
   font-family: var(--font-accent-mono);
   font-variant-ligatures: none;
-  font-size: 0.76rem;
+  font-size: 0.95rem;
   letter-spacing: 0.08em;
   line-height: 1;
   text-transform: uppercase;

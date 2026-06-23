@@ -13,8 +13,8 @@
     align-items: center;
     justify-content: center;
     gap: 0.5em;
-    min-height: 44px;
-    padding: 0.6rem 0.9rem;
+    min-height: 52px;
+    padding: 0.8rem 1.2rem;
     background: var(--control-background);
     background-image: none !important;
     border: 1px solid var(--line);
@@ -23,9 +23,9 @@
     color: var(--muted-strong);
     cursor: pointer;
     font-family: var(--font-accent-mono);
-    font-size: 0.74rem;
+    font-size: 0.9rem;
     font-weight: 400;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     line-height: normal;
     text-align: center;
     text-transform: uppercase;

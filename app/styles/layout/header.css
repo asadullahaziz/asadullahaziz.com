@@ -11,14 +11,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0.8rem var(--sticky-nav-inline-pad) 0;
+  padding: 1rem var(--sticky-nav-inline-pad) 0;
   z-index: var(--z-header);
   background: transparent;
   box-sizing: border-box;
   pointer-events: none;
 }
 
-/* The visible floating bar. */
+/* The visible floating bar — wide and roomy like pi.dev. */
 .site-nav-inner {
   position: relative;
   z-index: 1;
@@ -26,9 +26,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  width: min(100%, 64rem);
+  width: min(100%, 90rem);
   margin: 0 auto;
-  padding: 0.7rem 0.95rem;
+  padding: 0.95rem 1.4rem;
   background: var(--nav-panel-background);
   border: 1px solid var(--nav-panel-border);
   border-top-color: var(--nav-panel-highlight);
@@ -42,7 +42,7 @@
   }
 
   .site-nav-inner {
-    padding: 0.6rem 0.85rem;
+    padding: 0.75rem 1rem;
   }
 }
 
