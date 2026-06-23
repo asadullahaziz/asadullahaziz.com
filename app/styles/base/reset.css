@@ -92,9 +92,14 @@
       background-color 400ms ease;
   }
 
-  /* pi.dev page-grid texture: a fixed graph-paper layer behind all content. */
+  /* pi.dev page-grid texture: a fixed graph-paper layer behind all content.
+     Layer order (top -> bottom): minor lines, major lines, a radial paper
+     mask that hides the cross lines except for a small hole at each 20px
+     intersection, then the cross lines. The mask is what turns a solid
+     crosshatch into faint dots-at-intersections. */
   body::before {
     --grid-gap: 4px;
+    --paper-bg: var(--page-bg);
     content: '';
     position: fixed;
     inset: -8rem;
@@ -110,6 +115,11 @@
         var(--page-grid-major) 0 1px,
         transparent 1px calc(var(--grid-gap) * 5)
       ),
+      radial-gradient(
+        circle at center,
+        transparent calc(var(--grid-gap) / 2),
+        var(--paper-bg) calc(var(--grid-gap) / 2) 100%
+      ),
       linear-gradient(var(--page-grid-cross) 0 1px, transparent 1px calc(var(--grid-gap) * 5)),
       linear-gradient(
         to right,
@@ -122,7 +132,16 @@
       calc(var(--grid-gap) * 5) calc(var(--grid-gap) * 5),
       calc(var(--grid-gap) * 5) calc(var(--grid-gap) * 5),
       calc(var(--grid-gap) * 5) calc(var(--grid-gap) * 5),
+      calc(var(--grid-gap) * 5) calc(var(--grid-gap) * 5),
       calc(var(--grid-gap) * 5) calc(var(--grid-gap) * 5);
+    background-position:
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      calc(var(--grid-gap) * -2.5) calc(var(--grid-gap) * -2.5),
+      0 0,
+      0 0;
     transform: translateZ(0);
   }
 
